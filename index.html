@@ -34,6 +34,7 @@
         nav ul li a {
             color: #000; 
             text-decoration: none;
+            cursor: pointer;
         }
 
         main {
@@ -41,6 +42,7 @@
         }
 
         section {
+            display: none; /* Hide sections initially */
             margin-bottom: 20px;
         }
 
@@ -73,11 +75,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#meist">Meist</a></li>
-                <li><a href="#sõprus">Sõprus</a></li>
-                <li><a href="#hobid">Hobid</a></li>
-                <li><a href="#saavutused">Saavutused</a></li>
-                <li><a href="#jalgpall">Jalgpall</a></li>
+                <li><a onclick="toggleSection('meist')">Meist</a></li>
+                <li><a onclick="toggleSection('sõprus')">Sõprus</a></li>
+                <li><a onclick="toggleSection('hobid')">Hobid</a></li>
+                <li><a onclick="toggleSection('saavutused')">Saavutused</a></li>
+                <li><a onclick="toggleSection('jalgpall')">Jalgpall</a></li>
             </ul>
         </nav>
     </header>
@@ -118,7 +120,7 @@
             </p>
             <h3>Axel Reinas</h3>
             <p>
-                Axel lõpetas 2023. aastal Järveküla Kooli, kuhu tuli 2021.aastal Merivälja Koolist. Osales 7. klassis eesti keele olümpiaadil. Sai 2019. aastal Merivälja kooli poolt auhinna aktiivse ja eduka õppimise eest.
+                Axel lõpetas 2023. aastal Järveküla Kooli, kuhu tuli 2021.aastal Merivälja Koolist. Osales 7. klassis eesti keele olümpiaadil. Sai 2019. aastal Merivälja kooli poolt auhinna aktiivse ja edukas õppimise eest.
             </p>
         </div>
 
@@ -141,6 +143,19 @@
             </p>
         </div>
     </main>
+
+    <script>
+        function toggleSection(sectionId) {
+            var sections = document.querySelectorAll('main > div');
+            sections.forEach(function(section) {
+                if (section.id === sectionId) {
+                    section.style.display = section.style.display === 'none' ? 'block' : 'none';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
