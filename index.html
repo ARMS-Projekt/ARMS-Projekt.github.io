@@ -21,10 +21,6 @@
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-        }
-
         nav ul {
             list-style: none;
             padding: 0;
@@ -75,11 +71,19 @@
 
 <body>
     <header>
-        <h1>Meist</h1>
+        <nav>
+            <ul>
+                <li><a href="#meist">Meist</a></li>
+                <li><a href="#sõprus">Sõprus</a></li>
+                <li><a href="#hobid">Hobid</a></li>
+                <li><a href="#saavutused">Saavutused</a></li>
+                <li><a href="#jalgpall">Jalgpall</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div class="person">
+        <div id="meist" class="person">
             <h2>Märten Sokk</h2> 
             <img src="https://lh3.googleusercontent.com/la0LzcpgVxwa2JF-gm4RHsQN7Ug3kJqOEGC5RR2dOyDjVZuiB5VKm8qD2p7BTSoIABrRCZ9s-jL8lRMhTRo6GXzRyH_3wmc31yGRjV5z58Jldu9VHAnLwT3VXNfsbuzI3w=w1280" width="460" height="450">
             <p>
@@ -92,21 +96,21 @@
             </p>
         </div>
 
-        <div class="person">
+        <div id="sõprus" class="person">
             <h2>Sõprus</h2>
             <p>
                 Kohtusime esimesel koolipäeval, aatriumis. Hiljem oleme "arutanud" jalgpalli kohta.
             </p>
         </div>
 
-        <div class="person">
+        <div id="hobid" class="person">
             <h2>Hobid</h2>
             <p>
                 Vabal ajal meeldib meile mõlemale gaming, jalgpalli vaadata ja mängida ning jälgime F1-te.
             </p>
         </div>
 
-        <div class="person">
+        <div id="saavutused" class="person">
             <h2>Saavutused</h2>
             <h3>Märten Sokk</h3>
             <p>
@@ -118,7 +122,7 @@
             </p>
         </div>
 
-        <div class="person">
+        <div id="jalgpall" class="person">
             <h2>Jalgpall</h2>
             <p>
                 Mõlemad armastame jalgpalli. Axel toetab FC Barcelonat ja Märten Inter Milani.
@@ -140,4 +144,3 @@
 
 </body>
 </html>
-
