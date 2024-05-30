@@ -152,18 +152,25 @@
         </div>
     </main>
 
+    <footer>
+        &copy; 2023 Axeli ja Märteni leht
+    </footer>
+
     <script>
         function toggleSection(sectionId) {
             var sections = document.querySelectorAll('main > div');
             sections.forEach(function(section) {
                 if (section.id === sectionId) {
-                    section.style.display = section.style.display === 'none' ? 'block' : 'none';
+                    section.style.display = 'block';
                 } else {
                     section.style.display = 'none';
                 }
             });
         }
-    </script>
 
+        document.addEventListener("DOMContentLoaded", function() {
+            toggleSection('kodu');
+        });
+    </script>
 </body>
 </html>
